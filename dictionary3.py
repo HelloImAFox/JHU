@@ -13,3 +13,6 @@ for blah in dictionary :
 print(dictionary.values())
 print(dictionary.keys())
 print(dictionary.items()) #returns a tuple of they key:value pairs in the dictionary
+#this allows for the use of dual iteration variables within a single for
+for a,b in dictionary.items() :
+    print(f'the key is actually {a} and the value is actually {b}')
