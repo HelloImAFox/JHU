@@ -1,9 +1,8 @@
 #using dictionaries part 2
 dictionary = {}
 words = input('Please enter some lines: ')
-zork = words.replace('"', '')
-zorg = zork.split()
-for word in zorg :
+words = words.split()
+for word in words :
     dictionary[word] = dictionary.get(word, 0) + 1
 print(dictionary)
 for blah in dictionary :
