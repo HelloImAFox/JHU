@@ -1,7 +1,8 @@
 #parsing examples
 with open('/users/christopherknuff/desktop/mbox-short.txt') as file:
-#    line = file.readline()
-    for line in file:
+line = file.readline()
+for line in file:
+    lin
         line.rstrip()
         if line == '': #this skips blank lines to prevent traceback
             continue

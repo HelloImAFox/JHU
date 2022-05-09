@@ -3,10 +3,10 @@ import argparse
 import sys
 import re
 mypar = argparse.ArgumentParser()
-mypar.add_argument('--source_gff', type = str, required = True, help = 'Enter your source .gff')
-mypar.add_argument('--value', type = str, required = True, help = 'Enter value e.g. YAR003W')
-mypar.add_argument('--attribute', type = str, required = True, help = 'Enter attribute e.g. ID, Parent')
-mypar.add_argument('--type', type = str, required = True, help = 'Enter type e.g. gene')
+mypar.add_argument('--source_gff', type = str, required = True, help = 'I hope this works')
+mypar.add_argument('--value', type = str, required = True, help = 'I hope this works')
+mypar.add_argument('--attribute', type = str, required = True, help = 'I hope this works')
+mypar.add_argument('--type', type = str, required = True, help = 'I hope this works')
 args = mypar.parse_args()
 blah = str(f'{args.attribute}={args.value}')
 blah1 = str(f'{args.type}')
@@ -40,8 +40,10 @@ z = new2[3]
 a = int(z)
 zz = new2[4]
 b = int(zz)
+#print(new2[0:7])
 if new2[6] == "+":
     sequence = fullstring5[a:b]
 else:
     sequence = fullstring5[a:b][::-1]
 sys.stdout.write(f'>{args.type}:{args.attribute}:{args.value}\n{sequence}\n')
+
