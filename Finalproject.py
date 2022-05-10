@@ -3,10 +3,10 @@ import argparse
 import sys
 import re
 mypar = argparse.ArgumentParser()
-mypar.add_argument('--source_gff', type = str, required = True, help = 'Enter source .gff here')
-mypar.add_argument('--value', type = str, required = True, help = 'Enter value e.g. YAR003W')
-mypar.add_argument('--attribute', type = str, required = True, help = 'Enter attribute e.g. ID or Parent')
-mypar.add_argument('--type', type = str, required = True, help = 'Enter type here e.g. gene')
+mypar.add_argument('--source_gff', type = str, required = True, help = 'I hope this works')
+mypar.add_argument('--value', type = str, required = True, help = 'I hope this works')
+mypar.add_argument('--attribute', type = str, required = True, help = 'I hope this works')
+mypar.add_argument('--type', type = str, required = True, help = 'I hope this works')
 args = mypar.parse_args()
 blah = str(f'{args.attribute}={args.value}')
 blah1 = str(f'{args.type}')
@@ -19,12 +19,12 @@ for line in open(args.source_gff):
         list1.append(line)
 new = [z for z in list1 if blah in z]
 if len(new) == False:
-    print("I'm sorry you may have entered something incorrectly. Please re-run the program and try again")
+    print("I'm sorry nothing matches your query or you entered something incorrectly. Please re-run and try again")
     quit()
 new1 = [x for x in new if blah1 in x]
 #print(str(new1))
 if len(new1) == False:
-    print("I'm sorry that type is not valid. Please re-run the program and try again")
+    print("Nothing matches your query and your type is not valid. Please re-run and try again")
     quit()
 for all in list0:
     m = re.findall(r'^[A:G:T:C][ATGC]{10,100}', all)
